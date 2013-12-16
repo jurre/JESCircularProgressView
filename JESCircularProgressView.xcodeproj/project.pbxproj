@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0710DEFD185E75AC008E6F96 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0710DEFC185E75AC008E6F96 /* MainMenu.xib */; };
+		0710DEFE185E7684008E6F96 /* JESCircularProgressView-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 07238C4C185E34550055F3FE /* JESCircularProgressView-Prefix.pch */; };
+		0710DF03185E7799008E6F96 /* JESCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C77185E51BB0055F3FE /* JESCircularProgressView.m */; };
+		07238C3F185E34550055F3FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07238C3E185E34550055F3FE /* Cocoa.framework */; };
+		07238C7D185E53B80055F3FE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07238C7C185E53B80055F3FE /* Quartz.framework */; };
+		076D6842185E7822004CB332 /* NSBezierPath+BezierPathQuartzUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C73185E358D0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.m */; };
+		076D6844185E7846004CB332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C4A185E34550055F3FE /* main.m */; };
+		076D6845185E7851004CB332 /* JESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C51185E34550055F3FE /* JESAppDelegate.m */; };
+		076D6847185E78CD004CB332 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076D6846185E78CD004CB332 /* InfoPlist.strings */; };
+		076D684A185E7AA9004CB332 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 076D6848185E7AA9004CB332 /* Credits.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0710DEFC185E75AC008E6F96 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = JESCircularProgressView/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		07238C3B185E34550055F3FE /* JESCircularProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JESCircularProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07238C3E185E34550055F3FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		07238C41185E34550055F3FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		07238C42185E34550055F3FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		07238C43185E34550055F3FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07238C46185E34550055F3FE /* JESCircularProgressView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JESCircularProgressView-Info.plist"; path = "/Users/jurre/code/JESCircularProgressView/JESCircularProgressView/JESCircularProgressView-Info.plist"; sourceTree = "<absolute>"; };
+		07238C4A185E34550055F3FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = /Users/jurre/code/JESCircularProgressView/JESCircularProgressView/main.m; sourceTree = "<absolute>"; };
+		07238C4C185E34550055F3FE /* JESCircularProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JESCircularProgressView-Prefix.pch"; path = "/Users/jurre/code/JESCircularProgressView/JESCircularProgressView/JESCircularProgressView-Prefix.pch"; sourceTree = "<absolute>"; };
+		07238C50185E34550055F3FE /* JESAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JESAppDelegate.h; sourceTree = "<group>"; };
+		07238C51185E34550055F3FE /* JESAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JESAppDelegate.m; sourceTree = "<group>"; };
+		07238C56185E34550055F3FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = /Users/jurre/code/JESCircularProgressView/JESCircularProgressView/Images.xcassets; sourceTree = "<absolute>"; };
+		07238C5C185E34550055F3FE /* JESCircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JESCircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07238C5D185E34550055F3FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07238C72185E358D0055F3FE /* JESCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JESCircularProgressView.h; path = Classes/JESCircularProgressView.h; sourceTree = "<group>"; };
+		07238C73185E358D0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+BezierPathQuartzUtilities.m"; path = "Classes/NSBezierPath+BezierPathQuartzUtilities.m"; sourceTree = "<group>"; };
+		07238C77185E51BB0055F3FE /* JESCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JESCircularProgressView.m; path = Classes/JESCircularProgressView.m; sourceTree = "<group>"; };
+		07238C78185E51BB0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+BezierPathQuartzUtilities.h"; path = "Classes/NSBezierPath+BezierPathQuartzUtilities.h"; sourceTree = "<group>"; };
+		07238C7C185E53B80055F3FE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		076D6846185E78CD004CB332 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = JESCircularProgressView/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		076D6849185E7AA9004CB332 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = JESCircularProgressView/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07238C38185E34550055F3FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07238C7D185E53B80055F3FE /* Quartz.framework in Frameworks */,
+				07238C3F185E34550055F3FE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07238C32185E34550055F3FE = {
+			isa = PBXGroup;
+			children = (
+				07238C44185E34550055F3FE /* JESCircularProgressView */,
+				07238C3D185E34550055F3FE /* Frameworks */,
+				07238C3C185E34550055F3FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07238C3C185E34550055F3FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07238C3B185E34550055F3FE /* JESCircularProgressView.app */,
+				07238C5C185E34550055F3FE /* JESCircularProgressViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07238C3D185E34550055F3FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07238C7C185E53B80055F3FE /* Quartz.framework */,
+				07238C3E185E34550055F3FE /* Cocoa.framework */,
+				07238C5D185E34550055F3FE /* XCTest.framework */,
+				07238C40185E34550055F3FE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07238C40185E34550055F3FE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07238C41185E34550055F3FE /* AppKit.framework */,
+				07238C42185E34550055F3FE /* CoreData.framework */,
+				07238C43185E34550055F3FE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		07238C44185E34550055F3FE /* JESCircularProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				07792171185E709400CF80E7 /* Classes */,
+				07238C50185E34550055F3FE /* JESAppDelegate.h */,
+				07238C51185E34550055F3FE /* JESAppDelegate.m */,
+				0710DEFC185E75AC008E6F96 /* MainMenu.xib */,
+				07238C56185E34550055F3FE /* Images.xcassets */,
+				07238C45185E34550055F3FE /* Supporting Files */,
+			);
+			path = JESCircularProgressView;
+			sourceTree = "<group>";
+		};
+		07238C45185E34550055F3FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				076D6848185E7AA9004CB332 /* Credits.rtf */,
+				07238C46185E34550055F3FE /* JESCircularProgressView-Info.plist */,
+				07238C4A185E34550055F3FE /* main.m */,
+				07238C4C185E34550055F3FE /* JESCircularProgressView-Prefix.pch */,
+				076D6846185E78CD004CB332 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			path = JESCircularProgressView;
+			sourceTree = "<group>";
+		};
+		07238C75185E51580055F3FE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		07792171185E709400CF80E7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				07238C75185E51580055F3FE /* Categories */,
+				07238C77185E51BB0055F3FE /* JESCircularProgressView.m */,
+				07238C78185E51BB0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.h */,
+				07238C72185E358D0055F3FE /* JESCircularProgressView.h */,
+				07238C73185E358D0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07238C3A185E34550055F3FE /* JESCircularProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07238C6C185E34550055F3FE /* Build configuration list for PBXNativeTarget "JESCircularProgressView" */;
+			buildPhases = (
+				07238C37185E34550055F3FE /* Sources */,
+				07238C38185E34550055F3FE /* Frameworks */,
+				07238C39185E34550055F3FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JESCircularProgressView;
+			productName = JESCircularProgressView;
+			productReference = 07238C3B185E34550055F3FE /* JESCircularProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07238C33185E34550055F3FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JES;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = jurrestender;
+			};
+			buildConfigurationList = 07238C36185E34550055F3FE /* Build configuration list for PBXProject "JESCircularProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07238C32185E34550055F3FE;
+			productRefGroup = 07238C3C185E34550055F3FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07238C3A185E34550055F3FE /* JESCircularProgressView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07238C39185E34550055F3FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0710DEFE185E7684008E6F96 /* JESCircularProgressView-Prefix.pch in Resources */,
+				076D6847185E78CD004CB332 /* InfoPlist.strings in Resources */,
+				0710DEFD185E75AC008E6F96 /* MainMenu.xib in Resources */,
+				076D684A185E7AA9004CB332 /* Credits.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07238C37185E34550055F3FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076D6845185E7851004CB332 /* JESAppDelegate.m in Sources */,
+				076D6844185E7846004CB332 /* main.m in Sources */,
+				076D6842185E7822004CB332 /* NSBezierPath+BezierPathQuartzUtilities.m in Sources */,
+				0710DF03185E7799008E6F96 /* JESCircularProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		076D6848185E7AA9004CB332 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076D6849185E7AA9004CB332 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07238C6A185E34550055F3FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		07238C6B185E34550055F3FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		07238C6D185E34550055F3FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JESCircularProgressView/JESCircularProgressView-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JESCircularProgressView/JESCircularProgressView-Info.plist";
+				PRODUCT_NAME = JESCircularProgressView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07238C6E185E34550055F3FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JESCircularProgressView/JESCircularProgressView-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JESCircularProgressView/JESCircularProgressView-Info.plist";
+				PRODUCT_NAME = JESCircularProgressView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07238C36185E34550055F3FE /* Build configuration list for PBXProject "JESCircularProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07238C6A185E34550055F3FE /* Debug */,
+				07238C6B185E34550055F3FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07238C6C185E34550055F3FE /* Build configuration list for PBXNativeTarget "JESCircularProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07238C6D185E34550055F3FE /* Debug */,
+				07238C6E185E34550055F3FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07238C33185E34550055F3FE /* Project object */;
+}
