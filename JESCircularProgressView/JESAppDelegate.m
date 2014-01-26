@@ -42,7 +42,7 @@
 
 - (IBAction)setProgress:(id)sender {
     CGFloat progress = [self.slider doubleValue] / 100.0f;
-    [self.circularIndicator setProgress:progress animated:NO];
+    self.circularIndicator.progress = progress;
 }
 
 @end
