@@ -10,9 +10,16 @@
 #import <Quartz/Quartz.h>
 #import "NSBezierPath+BezierPathQuartzUtilities.h"
 
+#define DEFAULT_TINT_COLOR [NSColor colorWithDeviceRed:0.139 green:0.449 blue:0.867 alpha:1.000]
+
+static const CGFloat JESDefaultAnimationDuration = 0.25;
+static const CGFloat JESDefaultOuterLineWidth = 1;
+static const CGFloat JESDefaultProgressLineWidth = 4;
+
 @interface JESCircularProgressView ()
 
 @property (nonatomic, assign) CAShapeLayer *progressLayer;
+@property (nonatomic, assign) CAShapeLayer *outerLayer;
 @property (nonatomic, strong) NSBezierPath *progressPath;
 @property (nonatomic, strong) NSBezierPath *outerPath;
 
@@ -39,22 +46,33 @@
 }
 
 - (void)setDefaultValues {
-    _progressLineWidth = 4;
-    _outerLineWidth = 1;
-    _tintColor = [NSColor colorWithDeviceRed:0.139 green:0.449 blue:0.867 alpha:1.000];
+    _progressLineWidth = JESDefaultProgressLineWidth;
+    _outerLineWidth = JESDefaultOuterLineWidth;
+    _tintColor = DEFAULT_TINT_COLOR;
     
-    _animationDuration = 0.25;
+    _animationDuration = JESDefaultAnimationDuration;
 
     [self setWantsLayer:YES];
 
-	CAShapeLayer *shape = [CAShapeLayer layer];
-	[shape setStrokeColor:[_tintColor CGColor]];
-    [shape setFillColor:[[NSColor clearColor] CGColor]];
-    shape.lineWidth = _progressLineWidth;
-	[self.layer addSublayer:shape];
-	_progressLayer = shape;
+	CAShapeLayer *progressShape = [CAShapeLayer layer];
+	[progressShape setStrokeColor:[_tintColor CGColor]];
+    [progressShape setFillColor:[[NSColor clearColor] CGColor]];
+    progressShape.lineWidth = _progressLineWidth;
+	[_layer addSublayer:progressShape];
+	_progressLayer = progressShape;
 
-	[self setProgress:0.0 animated:NO];
+
+    CAShapeLayer *outerLayer = [CAShapeLayer layer];
+	[outerLayer setStrokeColor:[_tintColor CGColor]];
+    [outerLayer setFillColor:[[NSColor clearColor] CGColor]];
+    outerLayer.lineWidth = _outerLineWidth;
+	[_layer addSublayer:outerLayer];
+	_outerLayer = outerLayer;
+
+    self.progress = 0;
+
+    [self drawOuterCircle];
+    [self drawProgressCircle];
 }
 
 #pragma mark - Getters/Setters
@@ -62,11 +80,14 @@
 - (void)setProgressLineWidth:(CGFloat)lineWidth {
 	_progressLineWidth = lineWidth;
 	[[self progressLayer] setLineWidth:_progressLineWidth];
+    [self setNeedsDisplay:YES];
 }
 
 - (void)setTintColor:(NSColor *)tintColor {
     _tintColor = tintColor;
     self.progressLayer.strokeColor = tintColor.CGColor;
+    self.outerLayer.strokeColor = tintColor.CGColor;
+    [self setNeedsDisplay:YES];
 }
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated {
@@ -80,7 +101,9 @@
     } else {
         [CATransaction setDisableActions:YES];
     }
-    [[self progressLayer] setStrokeEnd:_progress];
+    NSLog(@"PROGRESS: %f", _progress);
+    [self.progressLayer setStrokeStart:0.0];
+    [self.progressLayer setStrokeEnd:_progress];
     [CATransaction commit];
 }
 
@@ -90,18 +113,17 @@
 
 #pragma mark - Drawing
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [self drawOuterCircle];
-    [self drawProgressCircle];
-}
-
 - (void)drawProgressCircle {
     if (!self.progressPath) { _progressPath = [NSBezierPath bezierPath]; }
+
+    CGFloat endAngle = (2.0 * M_PI - M_PI_2) + 90;
+
+    NSLog(@"END ANGLE: %f", endAngle);
 
     [self.progressPath appendBezierPathWithArcWithCenter:[self center]
                                                   radius:[self radius]
                                               startAngle:90
-                                                endAngle:(2.0 * M_PI - M_PI_2) + 90
+                                                endAngle:endAngle
                                                clockwise:YES];
 
 	self.progressLayer.path = [self.progressPath quartzPath];
@@ -109,25 +131,23 @@
 }
 
 - (void)drawOuterCircle {
-    if (!self.outerPath) {
-        NSGraphicsContext *graphicsContext = [NSGraphicsContext currentContext];
-        CGContextRef context = [graphicsContext graphicsPort];
-        CGContextSetStrokeColorWithColor(context, [self.tintColor CGColor]);
-        CGContextSaveGState(context);
-
-        self.outerPath = [NSBezierPath bezierPathWithOvalInRect:[self outerLineInset]];
-
-        [self.outerPath setLineWidth:1.0f];
-        [self.outerPath stroke];
-
-        CGContextRestoreGState(context);
+    if (!_outerPath) {
+        _outerPath = [NSBezierPath bezierPath];
+        [self.outerPath appendBezierPathWithArcWithCenter:[self center]
+                                                   radius:[self radius] + self.progressLineWidth
+                                               startAngle:0
+                                                 endAngle:(2.0 * M_PI - M_PI_2)
+                                                clockwise:YES];
+        self.outerLayer.path = [self.outerPath quartzPath];
+        self.outerLayer.frame = self.bounds;
+        [self.outerLayer setStrokeEnd:1];
     }
 }
 
 # pragma mark - Maths
 
 - (CGFloat)progressInDegrees {
-    return self.progress * 360.0f;
+    return _progress * 360.0f;
 }
 
 - (CGFloat)radius {
@@ -142,32 +162,24 @@
             radius = width / 2.0;
         }
     }
-    return radius;
+    return floor(radius);
 }
 
 - (CGRect)progressLineInset {
     static CGRect progressLineInset;
     if (CGRectIsEmpty(progressLineInset)) {
-        progressLineInset = CGRectInset(self.bounds,
-                                        self.progressLineWidth + self.outerLineWidth,
-                                        self.progressLineWidth + self.outerLineWidth);
+        progressLineInset = CGRectIntegral(CGRectInset(self.bounds,
+                                           round(self.progressLineWidth + self.outerLineWidth),
+                                           round(self.progressLineWidth + self.outerLineWidth)));
     }
     return progressLineInset;
-}
-
-- (CGRect)outerLineInset {
-    static CGRect outerLineInset;
-    if (CGRectIsEmpty(outerLineInset)) {
-        outerLineInset = CGRectInset(self.bounds, self.outerLineWidth, self.outerLineWidth);
-    }
-    return outerLineInset;
 }
 
 - (CGPoint)center {
     static CGPoint center;
     if (CGPointEqualToPoint(CGPointZero, center)) {
-        center = CGPointMake(CGRectGetMidX([self progressLineInset]),
-                             CGRectGetMidY([self progressLineInset]));
+        center = CGPointMake(round(CGRectGetMidX([self progressLineInset])),
+                             round(CGRectGetMidY([self progressLineInset])));
     }
     return center;
 }
