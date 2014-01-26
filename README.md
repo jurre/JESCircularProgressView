@@ -14,6 +14,8 @@ pod "JESCircularProgressView"
 
 # Usage:
 
+Add a JESCircularProgressView to your xib/code, and update it's progress.
+
 ```objective-c
 
 // YourAwesomeThing.h
