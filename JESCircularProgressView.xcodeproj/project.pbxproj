@@ -132,9 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				07238C75185E51580055F3FE /* Categories */,
+				07238C72185E358D0055F3FE /* JESCircularProgressView.h */,
 				07238C77185E51BB0055F3FE /* JESCircularProgressView.m */,
 				07238C78185E51BB0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.h */,
-				07238C72185E358D0055F3FE /* JESCircularProgressView.h */,
 				07238C73185E358D0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.m */,
 			);
 			name = Classes;
