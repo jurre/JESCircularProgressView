@@ -101,7 +101,6 @@ static const CGFloat JESDefaultProgressLineWidth = 4;
     } else {
         [CATransaction setDisableActions:YES];
     }
-    NSLog(@"PROGRESS: %f", _progress);
     [self.progressLayer setStrokeStart:0.0];
     [self.progressLayer setStrokeEnd:_progress];
     [CATransaction commit];
@@ -116,14 +115,10 @@ static const CGFloat JESDefaultProgressLineWidth = 4;
 - (void)drawProgressCircle {
     if (!self.progressPath) { _progressPath = [NSBezierPath bezierPath]; }
 
-    CGFloat endAngle = (2.0 * M_PI - M_PI_2) + 90;
-
-    NSLog(@"END ANGLE: %f", endAngle);
-
     [self.progressPath appendBezierPathWithArcWithCenter:[self center]
                                                   radius:[self radius]
                                               startAngle:90
-                                                endAngle:endAngle
+                                                endAngle:(2.0 * M_PI - M_PI_2) + 90
                                                clockwise:YES];
 
 	self.progressLayer.path = [self.progressPath quartzPath];
