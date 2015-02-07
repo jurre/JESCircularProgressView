@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0710DEFD185E75AC008E6F96 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0710DEFC185E75AC008E6F96 /* MainMenu.xib */; };
-		0710DEFE185E7684008E6F96 /* JESCircularProgressView-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 07238C4C185E34550055F3FE /* JESCircularProgressView-Prefix.pch */; };
 		0710DF03185E7799008E6F96 /* JESCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C77185E51BB0055F3FE /* JESCircularProgressView.m */; };
 		07238C3F185E34550055F3FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07238C3E185E34550055F3FE /* Cocoa.framework */; };
 		07238C7D185E53B80055F3FE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07238C7C185E53B80055F3FE /* Quartz.framework */; };
 		076D6842185E7822004CB332 /* NSBezierPath+BezierPathQuartzUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C73185E358D0055F3FE /* NSBezierPath+BezierPathQuartzUtilities.m */; };
-		076D6844185E7846004CB332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C4A185E34550055F3FE /* main.m */; };
 		076D6845185E7851004CB332 /* JESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07238C51185E34550055F3FE /* JESAppDelegate.m */; };
 		076D6847185E78CD004CB332 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 076D6846185E78CD004CB332 /* InfoPlist.strings */; };
 		076D684A185E7AA9004CB332 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 076D6848185E7AA9004CB332 /* Credits.rtf */; };
+		C0A102D11A85A7A50026E643 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A102D01A85A7A50026E643 /* main.m */; };
+		C0A102D31A85A7B20026E643 /* JESCircularProgressView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0A102D21A85A7B20026E643 /* JESCircularProgressView-Info.plist */; };
+		C0A102D61A85A7C20026E643 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A102D51A85A7C20026E643 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +27,8 @@
 		07238C41185E34550055F3FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		07238C42185E34550055F3FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		07238C43185E34550055F3FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		07238C46185E34550055F3FE /* JESCircularProgressView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "JESCircularProgressView-Info.plist"; path = "/Users/jurre/code/JESCircularProgressView/JESCircularProgressView/JESCircularProgressView-Info.plist"; sourceTree = "<absolute>"; };
-		07238C4A185E34550055F3FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = /Users/jurre/code/JESCircularProgressView/JESCircularProgressView/main.m; sourceTree = "<absolute>"; };
-		07238C4C185E34550055F3FE /* JESCircularProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JESCircularProgressView-Prefix.pch"; path = "/Users/jurre/code/JESCircularProgressView/JESCircularProgressView/JESCircularProgressView-Prefix.pch"; sourceTree = "<absolute>"; };
 		07238C50185E34550055F3FE /* JESAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JESAppDelegate.h; sourceTree = "<group>"; };
 		07238C51185E34550055F3FE /* JESAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JESAppDelegate.m; sourceTree = "<group>"; };
-		07238C56185E34550055F3FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = /Users/jurre/code/JESCircularProgressView/JESCircularProgressView/Images.xcassets; sourceTree = "<absolute>"; };
 		07238C5C185E34550055F3FE /* JESCircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JESCircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07238C5D185E34550055F3FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		07238C72185E358D0055F3FE /* JESCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JESCircularProgressView.h; path = Classes/JESCircularProgressView.h; sourceTree = "<group>"; };
@@ -41,6 +38,10 @@
 		07238C7C185E53B80055F3FE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		076D6846185E78CD004CB332 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = JESCircularProgressView/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		076D6849185E7AA9004CB332 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = JESCircularProgressView/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		C0A102D01A85A7A50026E643 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = JESCircularProgressView/main.m; sourceTree = SOURCE_ROOT; };
+		C0A102D21A85A7B20026E643 /* JESCircularProgressView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "JESCircularProgressView-Info.plist"; path = "JESCircularProgressView/JESCircularProgressView-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C0A102D41A85A7B70026E643 /* JESCircularProgressView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JESCircularProgressView-Prefix.pch"; path = "JESCircularProgressView/JESCircularProgressView-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		C0A102D51A85A7C20026E643 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +103,7 @@
 				07238C50185E34550055F3FE /* JESAppDelegate.h */,
 				07238C51185E34550055F3FE /* JESAppDelegate.m */,
 				0710DEFC185E75AC008E6F96 /* MainMenu.xib */,
-				07238C56185E34550055F3FE /* Images.xcassets */,
+				C0A102D51A85A7C20026E643 /* Images.xcassets */,
 				07238C45185E34550055F3FE /* Supporting Files */,
 			);
 			path = JESCircularProgressView;
@@ -111,10 +112,10 @@
 		07238C45185E34550055F3FE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0A102D41A85A7B70026E643 /* JESCircularProgressView-Prefix.pch */,
+				C0A102D21A85A7B20026E643 /* JESCircularProgressView-Info.plist */,
+				C0A102D01A85A7A50026E643 /* main.m */,
 				076D6848185E7AA9004CB332 /* Credits.rtf */,
-				07238C46185E34550055F3FE /* JESCircularProgressView-Info.plist */,
-				07238C4A185E34550055F3FE /* main.m */,
-				07238C4C185E34550055F3FE /* JESCircularProgressView-Prefix.pch */,
 				076D6846185E78CD004CB332 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -193,7 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0710DEFE185E7684008E6F96 /* JESCircularProgressView-Prefix.pch in Resources */,
+				C0A102D31A85A7B20026E643 /* JESCircularProgressView-Info.plist in Resources */,
+				C0A102D61A85A7C20026E643 /* Images.xcassets in Resources */,
 				076D6847185E78CD004CB332 /* InfoPlist.strings in Resources */,
 				0710DEFD185E75AC008E6F96 /* MainMenu.xib in Resources */,
 				076D684A185E7AA9004CB332 /* Credits.rtf in Resources */,
@@ -208,8 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				076D6845185E7851004CB332 /* JESAppDelegate.m in Sources */,
-				076D6844185E7846004CB332 /* main.m in Sources */,
 				076D6842185E7822004CB332 /* NSBezierPath+BezierPathQuartzUtilities.m in Sources */,
+				C0A102D11A85A7A50026E643 /* main.m in Sources */,
 				0710DF03185E7799008E6F96 /* JESCircularProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
