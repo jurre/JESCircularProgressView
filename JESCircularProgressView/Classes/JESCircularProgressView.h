@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+IB_DESIGNABLE
 @interface JESCircularProgressView : NSView
 
 /**
@@ -15,27 +16,27 @@
  *  inclusive, where 1.0 indicates the completion of the task. The default value is 0.0. 
  *  Values less than 0.0 and greater than 1.0 are pinned to those limits.
  */
-@property (nonatomic, assign) CGFloat progress;
+@property (nonatomic, assign) IBInspectable CGFloat progress;
 
 /**
  *  The line width of the progress indicator.
  */
-@property (nonatomic, assign) CGFloat progressLineWidth;
+@property (nonatomic, assign) IBInspectable CGFloat progressLineWidth;
 
 /**
  *  The line width of the outer circle.
  */
-@property (nonatomic, assign) CGFloat outerLineWidth;
+@property (nonatomic, assign) IBInspectable CGFloat outerLineWidth;
 
 /**
  *  The duration of each animation.
  */
-@property (nonatomic, assign) CGFloat animationDuration;
+@property (nonatomic, assign) IBInspectable CGFloat animationDuration;
 
 /**
  *  The color of the outer circle and progress line.
  */
-@property (nonatomic, strong) NSColor *tintColor;
+@property (nonatomic, strong) IBInspectable NSColor *tintColor;
 
 /**
  *  Adjusts the current progress shown by the receiver, optionally animating the change.

@@ -179,4 +179,13 @@ static const CGFloat JESDefaultProgressLineWidth = 4;
     return center;
 }
 
+# pragma mark - Interface Builder Support
+
+- (void) prepareForInterfaceBuilder
+{
+    [self setDefaultValues];
+    [self setProgress:_progress];
+}
+
+
 @end
