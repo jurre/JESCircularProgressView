@@ -62,3 +62,5 @@ There's a few things you can configure:
  */
 @property (nonatomic, strong) NSColor *tintColor;
 ```
+
+You can also configure these in Interface Builder. 
