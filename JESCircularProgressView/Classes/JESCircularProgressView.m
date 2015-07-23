@@ -169,6 +169,12 @@ static const CGFloat JESDefaultProgressLineWidth = 4;
 		                                               round(self.progressLineWidth + self.outerLineWidth),
 		                                               round(self.progressLineWidth + self.outerLineWidth)));
 	}
+	if (!isnormal(progressLineInset.origin.x) ||
+		!isnormal(progressLineInset.origin.y) ||
+		!isnormal(progressLineInset.size.width) ||
+		!isnormal(progressLineInset.size.height)) {
+		progressLineInset = CGRectZero;
+	}
 	return progressLineInset;
 }
 
